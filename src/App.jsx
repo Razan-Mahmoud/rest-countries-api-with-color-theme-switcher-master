@@ -12,7 +12,7 @@ import BorderCountry from './Componants/BorderCountry';
 export default function App() {
 
   let routes = createBrowserRouter([
-    {path: "", element: <Layout/>, children: [
+    {path: "/rest-countries-api-with-color-theme-switcher-master/", element: <Layout/>, children: [
       {index: true, element: <Home/>},
       {path: "rest-countries-api-with-color-theme-switcher-master/home", element: <Home/>},
       {path: "rest-countries-api-with-color-theme-switcher-master/filter", element: <Filter/>},
