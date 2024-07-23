@@ -94,7 +94,7 @@ export default function Details() {
 
 
             <p><span className='fw-bold'>Border Countries: </span> {countryDetail.borders?.map((z, i) => {
-              return <Link to={"/border/" + z} key={i} className='elements text-decoration-none'><button className='btn px-4 me-2 bg-transparent elements lightElementsBg border border-2' >{z}</button></Link>
+              return <Link to={"rest-countries-api-with-color-theme-switcher-master/border/" + z} key={i} className='elements text-decoration-none'><button className='btn px-4 me-2 bg-transparent elements lightElementsBg border border-2' >{z}</button></Link>
 
             })}
             </p>

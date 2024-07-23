@@ -71,7 +71,7 @@ export default function Home() {
 
                     {countryList?.filter((country) => country.name.common.toLowerCase().includes(searchVal)).filter((country) => country.region.toLowerCase().includes(selectVal)).map((country, i) => {
                         return <div key={i} className="col-md-3 mt-5 land ">
-                            <Link to={"/details/" + country.cca3} className='elements text-decoration-none'>
+                            <Link to={"rest-countries-api-with-color-theme-switcher-master/details/" + country.cca3} className='elements text-decoration-none'>
                                 <div className='item lightElementsBg'>
                                     <img src={country.flags.png} alt="" className='w-100 imgs' />
                                     <div className='ms-3 w-100'>
