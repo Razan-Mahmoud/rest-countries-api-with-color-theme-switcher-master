@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+$darkBlue: hsl(209, 23%, 22%);
+$veryDarkBlue: hsl(207, 26%, 17%);
+$darkBluish: hsl(200, 15%, 8%);
+$darkGray: hsla(0, 0%, 52%, 0.446);
+$veryLightGray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+*{
+    margin: 0px;
+}
+body{
+   font-family: "Nunito Sans", sans-serif;
+}
+
+.darkModeBtn{
+    cursor: pointer;
+}
+.lightBg{
+background-color: $veryLightGray;
+color: $veryDarkBlue;
+
+}
+
+.lightElementsBg{
+        background-color: $white;
+        color: $veryDarkBlue;
+    }
+
+   
+ .darkBg{
+        background-color: $veryDarkBlue;
+        color: $white;
+        ::placeholder{
+            color: $white;
+        }
+      }
+  .darkElementBg{
+    background-color: $darkBlue;
+    color: $white;
+}
+
+
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgs{
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media only screen and (max-width: 667px) {
+    .item2{
+    flex-direction: column;
+    }
+}
