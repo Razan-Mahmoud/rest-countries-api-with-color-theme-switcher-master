@@ -47,7 +47,7 @@ export default function Home() {
 
             <div className='w-100 px-4 py-2 divBg elements lightElementsBg'>
                 <div className='d-flex justify-content-between title'>
-                    <Link to={"rest-countries-api-with-color-theme-switcher-master/home"} className='elements lightElementsBg text-decoration-none'><h1 >Where in the world?</h1></Link>
+                    <Link to={"/rest-countries-api-with-color-theme-switcher-master/home"} className='elements lightElementsBg text-decoration-none'><h1 >Where in the world?</h1></Link>
                     <div onClick={changeMode} className='px-2 rounded-2 bg-transparent d-flex align-items-center darkModeBtn justify-content-center'><i className="fa-regular fa-moon "></i>
                         <h6 className='ms-1 '>Dark Mode</h6></div>
                 </div>
@@ -71,7 +71,7 @@ export default function Home() {
 
                     {countryList?.filter((country) => country.name.common.toLowerCase().includes(searchVal)).filter((country) => country.region.toLowerCase().includes(selectVal)).map((country, i) => {
                         return <div key={i} className="col-md-3 mt-5 land ">
-                            <Link to={"rest-countries-api-with-color-theme-switcher-master/details/" + country.cca3} className='elements text-decoration-none'>
+                            <Link to={"/rest-countries-api-with-color-theme-switcher-master/details/" + country.cca3} className='elements text-decoration-none'>
                                 <div className='item lightElementsBg'>
                                     <img src={country.flags.png} alt="" className='w-100 imgs' />
                                     <div className='ms-3 w-100'>
