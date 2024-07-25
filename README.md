@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [REST Countr API Exercise](https://razan-mahmoud.github.io/rest-countries-api-with-color-theme-switcher-master/)
+- Solution URL: [REST Countries API Exercise](https://razan-mahmoud.github.io/rest-countries-api-with-color-theme-switcher-master/)
 
 ## My process
 
