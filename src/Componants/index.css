@@ -55,4 +55,7 @@ body {
   .item2 {
     flex-direction: column;
   }
+  .land {
+    width: 50vb;
+  }
 }/*# sourceMappingURL=index.css.map */

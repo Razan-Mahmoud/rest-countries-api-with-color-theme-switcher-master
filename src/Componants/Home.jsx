@@ -20,10 +20,11 @@ export default function Home() {
 
     useEffect(() => {
         getAllCountries()
-    }
-        , [])
+    }, [])
 
     let [searchVal, setSearchval] = useState("")
+
+
     function changeMode() {
         if ($(".mainSection").hasClass("lightBg")
             && $(".item").hasClass("lightElementsBg")
@@ -31,12 +32,14 @@ export default function Home() {
             $(".mainSection").removeClass("lightBg").addClass("darkBg")
             $(".item").removeClass("lightElementsBg").addClass("darkElementBg")
             $(".elements").removeClass("lightElementsBg").addClass("darkElementBg")
+
         } else if ($(".mainSection").hasClass("darkBg")
             && $(".item").hasClass("darkElementBg")
             && $(".elements").hasClass("darkElementBg")) {
             $(".mainSection").removeClass("darkBg").addClass("lightBg")
             $(".item").removeClass("darkElementBg").addClass("lightElementsBg")
             $(".elements").removeClass("darkElementBg").addClass("lightElementsBg")
+
         }
     }
     return (
@@ -70,7 +73,7 @@ export default function Home() {
                     </div>
 
                     {countryList?.filter((country) => country.name.common.toLowerCase().includes(searchVal)).filter((country) => country.region.toLowerCase().includes(selectVal)).map((country, i) => {
-                        return <div key={i} className="col-md-3 mt-5 land ">
+                        return <div key={i} className="col-md-3 mt-5 land">
                             <Link to={"/rest-countries-api-with-color-theme-switcher-master/details/" + country.cca3} className='elements text-decoration-none'>
                                 <div className='item lightElementsBg'>
                                     <img src={country.flags.png} alt="" className='w-100 imgs' />
