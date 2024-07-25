@@ -33,7 +33,7 @@ Users should be able to:
 ### Screenshot
 
 ![REST-Countries-ScreenShot](https://github.com/user-attachments/assets/65be0764-d614-4f00-add0-3c018afaca57)
-nShot]
+
 
 
 ### Links
