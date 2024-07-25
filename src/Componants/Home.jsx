@@ -62,7 +62,7 @@ export default function Home() {
                 <div className="row g-4 ">
                     <div className='d-flex justify-content-between my-4'>
                         <input onChange={(e) => setSearchval(e.target.value)} className='form-control w-50 elements lightElementsBg' placeholder='Search for a country' />
-                        <select onChange={(e) => setSelectVal(e.target.value)} className='form-select w-25 elements lightElementsBg'>
+                        <select onKeyUp={(e) => setSelectVal(e.target.value)} className='form-select w-25 elements lightElementsBg'>
                             <option label="Filter by Region">Filter by Region</option>
                             <option value="africa">Africa</option>
                             <option value="americas">Americas</option>
