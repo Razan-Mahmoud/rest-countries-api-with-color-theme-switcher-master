@@ -24,6 +24,7 @@ export default function Home() {
 
     let [searchVal, setSearchval] = useState("")
 
+searchVal = searchVal.toLowerCase()
 
     function changeMode() {
         if ($(".mainSection").hasClass("lightBg")
@@ -61,7 +62,11 @@ export default function Home() {
             <div className="container-fluid pt-4 mb-2 px-4 lightBg mainSection" >
                 <div className="row g-4 ">
                     <div className='d-flex justify-content-between my-4'>
+
+
                         <input name='search' onChange={(e) => setSearchval(e.target.value)} className='form-control w-50 elements lightElementsBg' placeholder='Search for a country' />
+
+
                         <select onKeyUp={(e) => (e.target.value)} className='form-select w-25 elements lightElementsBg'>
                             <option label="Filter by Region">Filter by Region</option>
                             <option value="africa">Africa</option>
@@ -71,7 +76,7 @@ export default function Home() {
                             <option value="oceania">Oceania</option>
                         </select>
                     </div>
-                    
+
                     {countryList?.filter((country) => country.name.common.toLowerCase().includes(searchVal)).filter((country) => country.region.toLowerCase().includes(selectVal)).map((country, i) => {
                         return <div key={i} className="col-md-3 mt-5 land">
                             <Link to={"/rest-countries-api-with-color-theme-switcher-master/details/" + country.cca3} className='elements text-decoration-none'>
