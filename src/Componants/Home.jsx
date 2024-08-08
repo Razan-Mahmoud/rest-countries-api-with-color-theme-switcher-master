@@ -24,7 +24,6 @@ export default function Home() {
 
     let [searchVal, setSearchval] = useState("")
 
-searchVal = searchVal.toLowerCase()
 
     function changeMode() {
         if ($(".mainSection").hasClass("lightBg")
@@ -77,7 +76,7 @@ searchVal = searchVal.toLowerCase()
                         </select>
                     </div>
 
-                    {countryList?.filter((country) => country.name.common.toLowerCase().includes(searchVal)).filter((country) => country.region.toLowerCase().includes(selectVal)).map((country, i) => {
+                    {countryList?.filter((country) => country.name.common.toLowerCase().includes(searchVal.toLowerCase())).filter((country) => country.region.toLowerCase().includes(selectVal)).map((country, i) => {
                         return <div key={i} className="col-md-3 mt-5 land">
                             <Link to={"/rest-countries-api-with-color-theme-switcher-master/details/" + country.cca3} className='elements text-decoration-none'>
                                 <div className='item lightElementsBg'>
